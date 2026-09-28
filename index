@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="En interaktiv IT-opplevelse for 10.-klassinger.">
+    <title>IT på 5 minutter 🚀</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+    <div class="logo">💻 IT på 5 minutter</div>
+    <button class="menu-knapp" id="menuKnapp" aria-label="Åpne meny">☰</button>
+    <nav id="meny">
+        <a href="#start">Start</a>
+        <a href="#utfordringer">Utfordringer</a>
+        <a href="#bygger">Bygg nettside</a>
+        <a href="#om-it">Om IT</a>
+    </nav>
+</header>
+
+<main>
+    <section class="hero" id="start">
+        <div class="hero-innhold">
+            <span class="badge">🎓 For 10. klassinger</span>
+            <h1>Har du det som skal til for IT?</h1>
+            <p>Ikke bare les om IT. <strong>Prøv det selv.</strong> Ta utfordringer, løs problemer og lag din egen lille nettside.</p>
+            <a class="knapp hovedknapp" href="#utfordringer">Start 🚀</a>
+        </div>
+        <div class="hero-kort">
+            <div class="terminal">
+                <div class="terminal-top"><span></span><span></span><span></span></div>
+                <p><span class="gronn">student@it</span>:~$ start</p>
+                <p>Velkommen til IT!</p>
+                <p>Hva vil du prøve?</p>
+                <p class="blink">_</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="seksjon" id="utfordringer">
+        <div class="seksjon-tittel">
+            <span class="nummer">01</span>
+            <div>
+                <h2>Prøv deg på IT</h2>
+                <p>Velg en utfordring. Du trenger ingen forkunnskaper.</p>
+            </div>
+        </div>
+
+        <div class="kort-grid">
+            <article class="valg-kort" data-target="quiz">
+                <div class="ikon">🧠</div>
+                <h3>Hva ville du gjort?</h3>
+                <p>Test hvordan du tenker når noe går galt.</p>
+                <button class="knapp liten">Start quiz</button>
+            </article>
+
+            <article class="valg-kort" data-target="cyber">
+                <div class="ikon">🔐</div>
+                <h3>Cyber Challenge</h3>
+                <p>Klarer du å finne det skjulte passordet?</p>
+                <button class="knapp liten">Prøv</button>
+            </article>
+
+            <article class="valg-kort" data-target="feil">
+                <div class="ikon">🛠️</div>
+                <h3>Finn feilen</h3>
+                <p>En PC fungerer ikke. Hva sjekker du først?</p>
+                <button class="knapp liten">Finn feilen</button>
+            </article>
+        </div>
+    </section>
+
+    <section class="spill seksjon" id="quiz">
+        <div class="spill-boks">
+            <span class="badge">🧠 IT-quiz</span>
+            <h2>Hva ville du gjort?</h2>
+            <div id="quizInnhold"></div>
+        </div>
+    </section>
+
+    <section class="spill seksjon" id="cyber">
+        <div class="spill-boks">
+            <span class="badge">🔐 Cyber Challenge</span>
+            <h2>Finn det skjulte passordet</h2>
+            <p>Du har funnet en låst test-PC. Det ligger et hint på siden.</p>
+
+            <div class="kodeboks">
+                <p><span class="kommentar">// HINT.txt</span></p>
+                <p>Mitt passord har 6 bokstaver.</p>
+                <p>Det er noe mange IT-folk bruker hver dag.</p>
+                <p>Det starter med <strong>NET</strong>.</p>
+            </div>
+
+            <label for="passord">Skriv inn passordet:</label>
+            <div class="input-rad">
+                <input id="passord" type="text" autocomplete="off" placeholder="Skriv passord">
+                <button class="knapp" id="sjekkPassord">Sjekk</button>
+            </div>
+            <p id="cyberResultat" class="resultat"></p>
+        </div>
+    </section>
+
+    <section class="spill seksjon" id="feil">
+        <div class="spill-boks">
+            <span class="badge">🛠️ IT-support</span>
+            <h2>Finn feilen</h2>
+            <p>En elev sier: «PC-en min virker ikke!» Hva bør du gjøre først?</p>
+            <div class="alternativer" id="feilAlternativer">
+                <button>Installere Windows på nytt</button>
+                <button>Spørre hva som faktisk ikke fungerer</button>
+                <button>Kjøpe en ny PC</button>
+                <button>Bytte hele nettverket</button>
+            </div>
+            <p id="feilResultat" class="resultat"></p>
+        </div>
+    </section>
+
+    <section class="seksjon" id="bygger">
+        <div class="seksjon-tittel">
+            <span class="nummer">02</span>
+            <div>
+                <h2>Bygg din egen nettside</h2>
+                <p>Dette er en liten smakebit på webutvikling.</p>
+            </div>
+        </div>
+
+        <div class="bygger">
+            <div class="bygger-kontroller">
+                <label for="navn">Overskrift</label>
+                <input id="navn" type="text" value="Min nettside 🚀">
+
+                <label for="tekst">Tekst</label>
+                <textarea id="tekst" rows="4">Jeg lager min egen nettside!</textarea>
+
+                <label for="farge">Velg farge</label>
+                <input id="farge" type="color" value="#6c63ff">
+
+                <label for="emoji">Emoji</label>
+                <select id="emoji">
+                    <option>🚀</option>
+                    <option>🎮</option>
+                    <option>💻</option>
+                    <option>🔥</option>
+                    <option>😎</option>
+                    <option>⚽</option>
+                </select>
+            </div>
+
+            <div class="preview-wrap">
+                <p class="preview-label">LIVE FORHÅNDSVISNING</p>
+                <div class="preview" id="preview">
+                    <div class="preview-emoji" id="previewEmoji">🚀</div>
+                    <h3 id="previewNavn">Min nettside 🚀</h3>
+                    <p id="previewTekst">Jeg lager min egen nettside!</p>
+                    <button class="preview-knapp" id="previewKnapp">Klikk meg!</button>
+                    <p id="klikkResultat"></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="seksjon om-it" id="om-it">
+        <div class="seksjon-tittel">
+            <span class="nummer">03</span>
+            <div>
+                <h2>Hva kan du jobbe med innen IT?</h2>
+                <p>IT er mye mer enn bare programmering.</p>
+            </div>
+        </div>
+
+        <div class="it-grid">
+            <article><span>🖥️</span><h3>IT-drift</h3><p>PC-er, servere, nettverk, brukerstøtte og drift av systemer.</p></article>
+            <article><span>👨‍💻</span><h3>Programmering</h3><p>Lag apper, programmer og automatisering med kode.</p></article>
+            <article><span>🔐</span><h3>Cybersikkerhet</h3><p>Beskytt systemer, data og brukere mot digitale trusler.</p></article>
+            <article><span>🌐</span><h3>Webutvikling</h3><p>Lag nettsider og webapplikasjoner med HTML, CSS og JavaScript.</p></article>
+        </div>
+    </section>
+
+    <section class="cta">
+        <h2>Kanskje IT er noe for deg?</h2>
+        <p>Du trenger ikke kunne alt fra før. Det viktigste er at du er nysgjerrig og liker å finne ut hvordan ting fungerer.</p>
+        <a class="knapp hovedknapp" href="#start">Prøv på nytt 🚀</a>
+    </section>
+</main>
+
+<footer>
+    <p>💻 Laget som en interaktiv IT-opplevelse for utdanningsmesse.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
