@@ -1,0 +1,459 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #17172b;
+    background: #f5f6fb;
+    line-height: 1.5;
+}
+
+button, input, textarea, select {
+    font: inherit;
+}
+
+.topbar {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 6%;
+    background: rgba(255,255,255,.94);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid #e5e5ef;
+}
+
+.logo {
+    font-weight: 800;
+    font-size: 18px;
+}
+
+nav {
+    display: flex;
+    gap: 24px;
+}
+
+nav a {
+    color: #17172b;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+nav a:hover {
+    color: #6c63ff;
+}
+
+.menu-knapp {
+    display: none;
+    border: 0;
+    background: none;
+    font-size: 25px;
+}
+
+.hero {
+    min-height: 650px;
+    padding: 80px 8%;
+    display: grid;
+    grid-template-columns: 1.1fr .9fr;
+    align-items: center;
+    gap: 50px;
+    background: linear-gradient(135deg, #17172b, #28265b);
+    color: white;
+}
+
+.hero h1 {
+    font-size: clamp(42px, 7vw, 76px);
+    line-height: .98;
+    margin: 18px 0;
+}
+
+.hero p {
+    max-width: 650px;
+    font-size: 20px;
+    color: #dddff2;
+}
+
+.badge {
+    display: inline-block;
+    padding: 7px 13px;
+    border-radius: 30px;
+    background: #e9e7ff;
+    color: #5149cf;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.hero .badge {
+    background: #3d3978;
+    color: #fff;
+}
+
+.knapp {
+    border: 0;
+    border-radius: 12px;
+    padding: 12px 18px;
+    background: #6c63ff;
+    color: white;
+    cursor: pointer;
+    font-weight: 700;
+    transition: .2s;
+}
+
+.knapp:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.08);
+}
+
+.hovedknapp {
+    display: inline-block;
+    text-decoration: none;
+    margin-top: 15px;
+    padding: 15px 24px;
+    font-size: 18px;
+}
+
+.terminal {
+    padding: 25px;
+    border-radius: 18px;
+    background: #0c0c16;
+    box-shadow: 0 25px 70px rgba(0,0,0,.4);
+    font-family: monospace;
+    font-size: 17px;
+}
+
+.terminal-top {
+    display: flex;
+    gap: 7px;
+    margin-bottom: 25px;
+}
+
+.terminal-top span {
+    width: 12px;
+    height: 12px;
+    background: #666;
+    border-radius: 50%;
+}
+
+.gronn {
+    color: #68e56b;
+}
+
+.blink {
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
+
+.seksjon {
+    padding: 85px 8%;
+    max-width: 1250px;
+    margin: auto;
+}
+
+.seksjon-tittel {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    margin-bottom: 35px;
+}
+
+.nummer {
+    color: #6c63ff;
+    font-weight: 800;
+    font-size: 20px;
+}
+
+h2 {
+    font-size: clamp(30px, 5vw, 46px);
+    margin: 0 0 8px;
+    line-height: 1.1;
+}
+
+.seksjon-tittel p {
+    margin: 0;
+    color: #66677a;
+}
+
+.kort-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.valg-kort, .it-grid article {
+    padding: 28px;
+    border-radius: 20px;
+    background: white;
+    border: 1px solid #e7e7f0;
+    box-shadow: 0 8px 30px rgba(30,30,70,.06);
+}
+
+.valg-kort {
+    cursor: pointer;
+    transition: .2s;
+}
+
+.valg-kort:hover {
+    transform: translateY(-5px);
+    border-color: #aaa5ff;
+}
+
+.ikon {
+    font-size: 42px;
+}
+
+.valg-kort h3, .it-grid h3 {
+    font-size: 23px;
+    margin: 15px 0 5px;
+}
+
+.valg-kort p, .it-grid p {
+    color: #696a79;
+}
+
+.liten {
+    margin-top: 10px;
+}
+
+.spill {
+    max-width: 900px;
+}
+
+.spill-boks {
+    background: #17172b;
+    color: white;
+    padding: 40px;
+    border-radius: 24px;
+}
+
+.spill-boks h2 {
+    margin-top: 15px;
+}
+
+.spill-boks > p {
+    color: #d5d5e7;
+}
+
+.spørsmål {
+    margin-top: 30px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.alternativer {
+    display: grid;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.alternativer button {
+    padding: 15px;
+    text-align: left;
+    border: 1px solid #484766;
+    border-radius: 12px;
+    background: #26253f;
+    color: white;
+    cursor: pointer;
+}
+
+.alternativer button:hover {
+    background: #37355a;
+}
+
+.resultat {
+    min-height: 25px;
+    margin-top: 18px;
+    font-weight: 700;
+}
+
+.kodeboks {
+    padding: 20px;
+    margin: 25px 0;
+    border-radius: 14px;
+    background: #0b0b13;
+    font-family: monospace;
+    color: #ddd;
+}
+
+.kommentar {
+    color: #72d779;
+}
+
+.input-rad {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.input-rad input, .bygger-kontroller input, .bygger-kontroller textarea, .bygger-kontroller select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #d8d8e5;
+    border-radius: 10px;
+    background: white;
+}
+
+.input-rad input {
+    max-width: 300px;
+}
+
+.bygger {
+    display: grid;
+    grid-template-columns: .8fr 1.2fr;
+    gap: 25px;
+    align-items: stretch;
+}
+
+.bygger-kontroller {
+    padding: 28px;
+    background: white;
+    border-radius: 20px;
+    border: 1px solid #e7e7f0;
+}
+
+.bygger-kontroller label {
+    display: block;
+    font-weight: 700;
+    margin: 0 0 7px;
+}
+
+.bygger-kontroller input,
+.bygger-kontroller textarea,
+.bygger-kontroller select {
+    margin-bottom: 18px;
+}
+
+.preview-wrap {
+    padding: 18px;
+    background: #1b1a30;
+    border-radius: 20px;
+}
+
+.preview-label {
+    margin: 0 0 10px;
+    color: #bdbcd0;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.preview {
+    min-height: 380px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    text-align: center;
+    border-radius: 15px;
+    background: white;
+}
+
+.preview-emoji {
+    font-size: 65px;
+}
+
+.preview h3 {
+    font-size: 34px;
+    margin: 10px 0;
+}
+
+.preview p {
+    color: #656579;
+}
+
+.preview-knapp {
+    border: 0;
+    border-radius: 10px;
+    padding: 12px 20px;
+    background: #6c63ff;
+    color: white;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.it-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.it-grid article span {
+    font-size: 38px;
+}
+
+.cta {
+    padding: 100px 8%;
+    text-align: center;
+    background: #e9e7ff;
+}
+
+.cta p {
+    max-width: 650px;
+    margin: 10px auto;
+    color: #55556a;
+}
+
+footer {
+    padding: 30px;
+    text-align: center;
+    color: #777;
+    font-size: 14px;
+}
+
+@media (max-width: 800px) {
+    nav {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        padding: 20px;
+        background: white;
+        flex-direction: column;
+        border-bottom: 1px solid #ddd;
+    }
+
+    nav.vis {
+        display: flex;
+    }
+
+    .menu-knapp {
+        display: block;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        min-height: auto;
+        padding: 70px 6%;
+    }
+
+    .kort-grid, .it-grid, .bygger {
+        grid-template-columns: 1fr;
+    }
+
+    .seksjon {
+        padding: 65px 6%;
+    }
+
+    .spill-boks {
+        padding: 28px;
+    }
+
+    .input-rad {
+        flex-direction: column;
+    }
+
+    .input-rad input {
+        max-width: none;
+    }
+}
